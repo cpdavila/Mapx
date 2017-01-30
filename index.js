@@ -30,5 +30,5 @@ http.createServer(function(peticion, respuesta){
          respuesta.end('Error 404. El enlace no existe o ha dejado de existir.');
       }
    });
-}).listen(3000, 'mapx.herokuapp.com');
+}).listen(3000, '127.0.0.1');
 console.log('El servidor esta funcionando correctamente en http://localhost:3000/');
