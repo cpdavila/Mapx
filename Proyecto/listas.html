@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Mapx</title>
+    <!--<script src="node_modules/firebase/firebase.js"></script>-->
+    <link rel=StyleSheet href="css/style.css" type="text/css" media=screen>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body >
+
+    <!-- NavBar -->
+    <nav class="navbar  barra" role="navigation">
+        <div class="col-md-12 ">
+            <!--  NavBar Menu Galleta-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Desplegar navegación</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="font-size: 30px; color: #ffffff;">Mapx</a>
+            </div>
+
+            <!-- NavBar Menu -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <div class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a id="btnRegresar" class="btn btn-default">Regresar</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li><a id="btnLogout" class="btn btn-default">LogOut</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="listas">
+
+    </div>
+      
+    <div>
+        <div id="holaMundo"></div>
+    </div>
+    <div>
+        <div id="object"></div>
+    </div>
+
+    
+
+    <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6NaSMP_XCvbEkcD1hzlPpcHaZaeHKl9A&callback=initMap"></script>-->
+    
+    <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/lista.js"></script>
+    
+</body>
+</html>

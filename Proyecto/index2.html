@@ -1,0 +1,29 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+<meta charset="utf-8"/>
+<title>Hola Firebase</title>
+<script src="node_modules/firebase/firebase.js"></script>
+<script>
+    var ref = new firebase("https://prueba-4976a.firebaseio.com/");
+    ref.child("nombre").on("value", function (snapshot) {
+        console.log(snapshot.val());
+    });
+
+    console.log("Hola Mundo soy carolina");
+   
+
+   
+</script>
+
+</head>
+<body>
+
+</body>
+
+</html>
+
