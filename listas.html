@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Mapx</title>
+    <!--<script src="node_modules/firebase/firebase.js"></script>-->
+    <link rel=StyleSheet href="css/style.css" type="text/css" media=screen>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body >
+
+    <!-- NavBar -->
+    <nav class="navbar  barra" role="navigation">
+        <div class="col-md-12 ">
+            <!--  NavBar Menu Galleta-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Desplegar navegación</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="font-size: 30px; color: #ffffff;">Mapx</a>
+            </div>
+
+            <!-- NavBar Menu -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <div class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a id="btnRegresar" class="btn btn-default">Regresar</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li><a id="btnLogout" class="btn btn-default">LogOut</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="listas">
+
+    </div>
+
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                        Collapsible Group 1
+                    </a>
+                </h4>
+            </div>
+           
+             <div id="collapse1" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <!--Lista-->
+                    <div id="listas1" class="list-group">
+                        <a href="#" class="list-group-item ">
+                            <div class="row">
+                                <div class="col-md-1 col-xs-2"><img src="img/marker3.png" alt="Eliminar" class="img-rounded"></div>
+                                <div class="col-md-10 col-xs-8">
+                                    
+                                </div>
+                                <div class="col-md-1 col-xs-1"><img src="img/minus2.png" alt="Eliminar" class="img-rounded"></div>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item ">
+                            <div class="row">
+                                <div class="col-md-1 col-xs-2"><img src="img/marker3.png" alt="Eliminar" class="img-rounded"></div>
+                                <div class="col-md-10 col-xs-8">
+                                    <h4 class="list-group-item-heading">Lugar 2 </h4>
+                                    <p class="list-group-item-text">Coordenadas X,Y</p>
+                                </div>
+                                <div class="col-md-1 col-xs-1"><img src="img/minus2.png" alt="Eliminar" class="img-rounded"></div>
+                            </div>
+                        </a>
+                        <a href="#" class="list-group-item ">
+                            <div class="row">
+                                <div class="col-md-1 col-xs-2"><img src="img/marker3.png" alt="Eliminar" class="img-rounded"></div>
+                                <div class="col-md-10 col-xs-8">
+                                    <h4 class="list-group-item-heading">Lugar 3 </h4>
+                                    <p class="list-group-item-text">Coordenadas X,Y</p>
+                                </div>
+                                <div class="col-md-1 col-xs-1"><img src="img/minus2.png" alt="Eliminar" class="img-rounded"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Fin lista -->
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                        Collapsible Group 2
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat.
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                        Collapsible Group 3
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--<div style="margin-top:0px" id="map"></div>
+    <div class="container" id="formContent" >
+        <div class="fondo-menu">
+            <ul class="nav nav-pills nav-stacked">
+                <li ><a style="color: #1A7D84; background-color: #1A7D84; " href="#">.</a></li>
+                <li style="background-color: #1A7D84; "><a style="color: #ffffff;" href="#">Ver lugares ingresados <span class="glyphicon glyphicon-chevron-right" style="color: #ffffff; float: right;"></a></li>
+                <li style="background-color: #1A7D84;"><a style="color:#ffffff;" href="#">Añadir nuevo lugar <span class="glyphicon glyphicon-chevron-right" style="color: #ffffff; float: right;"></span></a></li>
+                <li><a style="color: #1A7D84; background-color: #1A7D84;" href="#">.</a></li>
+            </ul>
+        </div>     
+       
+    </div>-->        
+
+    <div>
+        <div id="holaMundo"></div>
+    </div>
+    <div>
+        <div id="object"></div>
+    </div>
+
+    <div>
+        <ul id="lista-prueba"></ul>
+    </div>
+
+    <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6NaSMP_XCvbEkcD1hzlPpcHaZaeHKl9A&callback=initMap"></script>-->
+    
+    <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/lista.js"></script>
+    
+</body>
+</html>
