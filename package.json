@@ -1,6 +1,6 @@
 {
   "name": "myapp",
-  "description": "a really cool app",
+  "description": "Aplicacion con Api Google Maps",
   "version": "1.0.0",
   "engines": {
     "node": "4.1.1"
