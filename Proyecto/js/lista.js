@@ -33,9 +33,10 @@ btnRegresar.addEventListener('click', e => {
 firebase.auth().onAuthStateChanged(firebaseUser => {
     if(firebaseUser){
     console.log(firebaseUser);
-//window.location="../home.html";
+
 }else {
     console.log('Not loged in');
+    window.location="../registro.html";
 }    
 }); 
 

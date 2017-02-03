@@ -30,7 +30,8 @@
         if(firebaseUser){
         console.log(firebaseUser);
     }else {
-        console.log('Not loged in');       
+        console.log('Not loged in');
+        window.location="../registro.html";
     }
 });
 

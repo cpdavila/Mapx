@@ -8,7 +8,7 @@
     <!--<script src="node_modules/firebase/firebase.js"></script>-->
     <link rel=StyleSheet href="css/style.css" type="text/css" media=screen>
     <link href="css/bootstrap.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="css/bootstrapValidator.css" />
 </head>
 <body>
     <!-- NavBar -->
@@ -37,45 +37,67 @@
             </div>
         </div>
     </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 margen-form" >
+                <form id="formulario">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="lblLista">Lista</label>
+                                <select class="form-control" id="selecLista" onchange="seleccionarLista()">
+                                    <option>Ejemplo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <label for="lblLista"></label>
+                                <input type="text" name="lista" class="form-control" id="txt_lista" placeholder="Seleccione o Ingrese una nueva" required data-bv-notempty-message="Seleccione o Ingrese un lista.">
+                            </div>
+                        </div>                        
+                    </div>                    
+                    <div class="form-group">
+                        <label for="etiqueta">Etiqueta del Lugar</label>
+                        <input type="text" name="lugar" value="" class="form-control" id="etiquetaLugar" required data-bv-notempty-message="Ingrese un nombre.">
+                    </div>
+                    <div class="form-group">
+                        <label for="lblDescripcion">Descripción</label>
+                        <textarea class="form-control" id="descripcion"  name="descripcion" rows="3" data-bv-stringlength="true" data-bv-stringlength-max="100" required data-bv-notempty-message="Ingrese una descripción." data-bv-stringlength-message="Ingresar un máximo de 100 caracteres"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="lblCoordenadas">Latitud</label>
+                                <input type="text" class="form-control" id="latitud" name="latitud">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="lblCoordenadas">Longitud</label>
+                                <input type="text" class="form-control" id="longitud" name="longitud"  required data-bv-notempty-message="Campo obligatorio." >
+                            </div>
+                        </div>
+                    </div>
+                    <button  id="btnGrabar" class="btn btn-primary">Grabar</button>
+                </form>
 
-    <div style="margin-top:0px" id="map"></div>
-    <div class="container" id="formContent">
-        <div>
-            <form>
-                <div class="form-group">
-                    <label for="lblLista">Lista</label>
-                    <select class="form-control" id="selecLista">
-                        <option>Lista1</option>
-                        <option>Lista2</option>
-                        <option>Lista3</option>                        
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="etiqueta">Etiqueta del Lugar</label>
-                    <input type="text" class="form-control" id="etiquetaLugar" >
-                </div>
-                <div class="form-group">
-                    <label for="lblDescripcion">Descripción</label>
-                    <textarea class="form-control" id="descripcion" rows="3"></textarea>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="lblCoordenadas">Latitud</label>
-                            <input type="number" class="form-control" id="latitud" onblur="AddMarker()">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="lblCoordenadas">Longitud</label>
-                            <input type="number" class="form-control" id="longitud" onblur="AddMarker()">
-                        </div>
-                    </div>
-                </div>
-                <a id="btnGrabar" class="btn btn-primary">Grabar</a>
-            </form>
+            </div>
+            <div class="col-md-9" style="height: 900px;">
+                <div style="margin-top: 0px; height: 100%" id="map"></div>
+            </div>
         </div>
     </div>
+
+    <!--<div style="margin-top:0px; height:100px">
+        <div style="margin-top:0px; width:100px" id="map"></div>
+    </div>-->    
+    <!--<div style="margin-top:0px" id="map"></div>-->
+    <!--<div class="container" id="formContent">
+        <div>
+           
+        </div>
+    </div>-->
 
     <div>
         <div id="holaMundo"></div>
@@ -87,6 +109,8 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrapValidator.js"></script>
     <script src="js/nuevoLugar.js"></script>
+   
 </body>
 </html>

@@ -23,7 +23,7 @@
 //EVENTOS BOTONES MENU
     //lOGIN
     btnLogin1.addEventListener('click', e => {
-        window.location="../home.html";
+        window.location="../registro.html";
 
     });
 
